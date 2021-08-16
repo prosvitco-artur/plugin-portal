@@ -4,9 +4,9 @@
   border: 0 !important;
   border-radius: 0.25rem !important;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  
+
   .MuiTab-wrapper {
-    align-items: flex-start;
+   align-items: flex-start;
   }
 
   &--inner {
@@ -19,9 +19,9 @@
    background-color: var(--nav-active-color);
    color: #fff;
   }
-  
+
   &.hidden {
-    display: none;
+   display: none;
   }
  }
 }
