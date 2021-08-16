@@ -134,7 +134,13 @@ class Prosvit_Extension_Public
 	public function rest_api_current_user(WP_REST_Request $request)
 	{
 		$data_json = userData($this->user->ID);
-		
+
+
+		$last_name = get_user_meta( $this->user->ID, 'last_name', true );
+		$first_name = get_user_meta( $this->user->ID, 'first_name', true );
+
+		$data_json->last_name = $last_name;
+		$data_json->first_name = $first_name;
 
 		if(!empty($data_json)){
 			$request = "success";
