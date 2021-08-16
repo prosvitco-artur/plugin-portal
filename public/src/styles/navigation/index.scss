@@ -4,9 +4,12 @@
   border: 0 !important;
   border-radius: 0.25rem !important;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  
+  background: var(--nav-default-bg) !important;
+  color: var(--nav-default-color) !important;
+  outline: none !important;
+
   .MuiTab-wrapper {
-    align-items: flex-start;
+   align-items: flex-start;
   }
 
   &--inner {
@@ -15,13 +18,14 @@
    gap: 10px;
   }
 
-  &.Mui-selected {
-   background-color: var(--nav-active-color);
-   color: #fff;
+  &.Mui-selected,
+  &:hover {
+   background-color: var(--nav-active-bg) !important;
+   color: var(--nav-active-color) !important;
   }
-  
+
   &.hidden {
-    display: none;
+   display: none;
   }
  }
 }
