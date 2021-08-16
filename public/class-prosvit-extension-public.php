@@ -60,6 +60,23 @@ class Prosvit_Extension_Public
 	 *
 	 * @since    1.0.0
 	 */
+
+	public function enqueue_styles()
+	{
+
+		/**
+		 * This function is provided for demonstration purposes only.
+		 *
+		 * An instance of this class should be passed to the run() function
+		 * defined in Prosvit_Extension_Loader as all of the hooks are defined
+		 * in that particular class.
+		 *
+		 * The Prosvit_Extension_Loader will then create the relationship
+		 * between the defined hooks and the functions defined in this
+		 * class.
+		 */
+		
+	}
 	public function enqueue_scripts()
 	{
 
@@ -257,7 +274,7 @@ class Prosvit_Extension_Public
 
 		if (isset($wp_query->query['portal'])) {
 			ob_start();
-			include PE_PATH . 'public/partials/prosvit-extension-public-archive.php';
+			include PE_PATH . 'public/partials/prosvit-extension-public-portal.php';
 			$content = ob_get_contents();
 			ob_end_clean();
 		}
