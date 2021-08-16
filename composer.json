@@ -1,0 +1,10 @@
+{
+    "extra": {
+        "installer-paths": {
+            "/srv/users/service2/apps/service2/public/wp-content/plugins/prosvit-extension/vendor/{$vendor}/{$name}/": ["type:wordpress-plugin"]
+        }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    }
+}

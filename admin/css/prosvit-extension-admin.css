@@ -1,0 +1,31 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+
+
+#pe-repeater .item-content{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #c3c4c7;
+    margin: 5px 0;
+    padding: 10px;
+    background: #fbfbfc;
+}
+
+#pe-repeater .repeater-heading{
+    margin-bottom: 10px;
+}
+
+#pe-repeater .repeater-remove-btn button{
+    color: #b32d2e;
+    border: none;
+    background: #fbfbfc;
+    font-weight: bold;
+}
+
+#pe-repeater .item-file-name{
+    display: block;
+    font-weight: 600;
+}
