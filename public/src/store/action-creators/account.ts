@@ -13,8 +13,8 @@ export const fetchAccount = () => {
     dispatch({
      type: AccountActionTypes.FETCH_ACCOUNT_SUCCESS,
      payload: {
-      firstName: 'First',
-      lastName: 'Last',
+      firstName: received.data.first_name,
+      lastName: received.data.last_name,
       email: received.data.user_email,
       profilePicture: 'https://via.placeholder.com/110',
      },
