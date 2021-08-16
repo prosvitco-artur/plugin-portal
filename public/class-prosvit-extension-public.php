@@ -138,9 +138,11 @@ class Prosvit_Extension_Public
 
 		$last_name = get_user_meta( $this->user->ID, 'last_name', true );
 		$first_name = get_user_meta( $this->user->ID, 'first_name', true );
+		$profile_picture= get_avatar_url( $this->user->ID); 
 
 		$data_json->last_name = $last_name;
 		$data_json->first_name = $first_name;
+		$data_json->profile_picture = $profile_picture;
 
 		if(!empty($data_json)){
 			$request = "success";
