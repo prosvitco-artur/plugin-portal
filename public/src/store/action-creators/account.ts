@@ -9,22 +9,19 @@ export const fetchAccount = () => {
    dispatch({ type: AccountActionTypes.FETCH_ACCOUNT })
    const response = await axios.get(API_URL + 'user')
    const received = response.data
-   if (await received.status === 'success') {
-     
-   } else {
-     dispatch({ type: AccountActionTypes.FETCH_ACCOUNT_FAIL, payload: 'Loading Account Error' })
-   }
-   setTimeout(() => {
+   if ((await received.status) === 'success') {
     dispatch({
      type: AccountActionTypes.FETCH_ACCOUNT_SUCCESS,
      payload: {
       firstName: 'First',
       lastName: 'Last',
-      email: 'first@last.email',
+      email: received.data.user_email,
       profilePicture: 'https://via.placeholder.com/110',
      },
     })
-   }, 2000)
+   } else {
+    dispatch({ type: AccountActionTypes.FETCH_ACCOUNT_FAIL, payload: 'Loading Account Error' })
+   }
   } catch (error) {
    dispatch({ type: AccountActionTypes.FETCH_ACCOUNT_FAIL, payload: 'Loading Account Error' })
   }
