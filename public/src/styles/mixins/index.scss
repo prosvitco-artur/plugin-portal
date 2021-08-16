@@ -1,0 +1,9 @@
+@mixin loading {
+ animation: animation-shimmering 1.5s linear infinite;
+ background-image: linear-gradient(-90deg, var(--placeholder-color-light) 0%, var(--placeholder-color-dark) 50%, var(--placeholder-color-light) 100%);
+ background-color: var(--placeholder-color-light);
+ background-position: -300px 0;
+ background-repeat: no-repeat;
+ background-size: 300px 100%;
+ border-radius: 4px;
+}

@@ -1,0 +1,23 @@
+.portal {
+ &__page {
+  padding: 0 15px;
+  position: relative;
+
+  &.loading {
+   .la {
+    @include loading;
+    color: transparent;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   }
+
+   .lat {
+    @include loading;
+
+    height: 40px;
+    margin-bottom: 5px;
+   }
+  }
+ }
+}

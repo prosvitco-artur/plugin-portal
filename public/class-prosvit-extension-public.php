@@ -75,7 +75,7 @@ class Prosvit_Extension_Public
 		 * class.
 		 */
 
-		$plugin_dir = ABSPATH . 'wp-content/plugins/new-plugin/';
+		$plugin_dir = ABSPATH . 'wp-content/plugins/plugin-portal/';
 		$js_content = file_get_contents($plugin_dir . "/public/build/asset-manifest.json");
 		$contents = json_decode($js_content);
 		foreach($contents->files as $name => $path){

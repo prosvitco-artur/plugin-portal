@@ -1,0 +1,17 @@
+#root {
+ max-width: 100%;
+ all: initial;
+}
+
+.portal {
+ &__main-container {
+  display: grid;
+  grid-gap: 70px 20px;
+  grid-template-columns: 1fr;
+  margin-bottom: 70px;
+
+  @media (min-width: 768px) {
+   grid-template-columns: 300px 1fr;
+  }
+ }
+}
